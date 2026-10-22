@@ -16,7 +16,8 @@ CREATE USER 'sys_temp'@'localhost' IDENTIFIED BY 'password';
 1.3. Список пользователей в базе данных
 sql
 SELECT User, Host FROM mysql.user;
-![Скриншот 1.3](https://github.com/nikolajgalizin2018-netizen/DDL-DML/raw/main/screenshot-1.png)
+<img width="1920" height="1080" alt="screenshot-1" src="https://github.com/user-attachments/assets/04c8ffea-c3cc-4fd1-a1c9-4aa427e156ff" />
+
 
 1.4. Выдача всех прав пользователю sys_temp
 sql
@@ -25,7 +26,7 @@ FLUSH PRIVILEGES;
 1.5. Список прав пользователя sys_temp
 sql
 SHOW GRANTS FOR 'sys_temp'@'localhost';
-![Скриншот 1.5](https://github.com/nikolajgalizin2018-netizen/DDL-DML/raw/main/screenshot-2.png)
+![Uploading screenshot-2.png…]()
 
 1.6. Переподключение от имени sys_temp
 Выполнен выход из сеанса root и вход под новой учётной записью:
@@ -56,7 +57,8 @@ USE sakila;
 SHOW TABLES;
 Получено 23 строки (таблицы и представления Sakila).
 
-![Скриншот 1.8](https://github.com/nikolajgalizin2018-netizen/DDL-DML/raw/main/screenshot-3.png)
+<img width="1920" height="1080" alt="screenshot-3" src="https://github.com/user-attachments/assets/7484c5fd-5bce-4f0e-9911-bd8675591474" />
+
 
 Задание 2. Таблица «таблица — первичный ключ»
 Реальные таблицы (BASE TABLE)
@@ -99,7 +101,8 @@ FROM information_schema.KEY_COLUMN_USAGE
 WHERE TABLE_SCHEMA = 'sakila'
   AND CONSTRAINT_NAME = 'PRIMARY'
 ORDER BY TABLE_NAME, ORDINAL_POSITION;
-![Скриншот задания 2](https://github.com/nikolajgalizin2018-netizen/DDL-DML/raw/main/screenshot-4.png)
+<img width="1920" height="1080" alt="screenshot-4" src="https://github.com/user-attachments/assets/c59959c1-59ba-417f-8b5e-8df514e4dfcf" />
+
 
 Выводы
 В ходе работы освоены: запуск MySQL 8.0 в Docker, создание пользователя и выдача прав, переключение типа аутентификации, 
