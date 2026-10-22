@@ -16,7 +16,7 @@ CREATE USER 'sys_temp'@'localhost' IDENTIFIED BY 'password';
 1.3. Список пользователей в базе данных
 sql
 SELECT User, Host FROM mysql.user;
-https://screenshot-1.png/
+![Скриншот 1.3](screenshot-1.png)
 
 1.4. Выдача всех прав пользователю sys_temp
 sql
@@ -25,7 +25,7 @@ FLUSH PRIVILEGES;
 1.5. Список прав пользователя sys_temp
 sql
 SHOW GRANTS FOR 'sys_temp'@'localhost';
-https://screenshot-2.png/
+![Скриншот 1.5](screenshot-2.png)
 
 1.6. Переподключение от имени sys_temp
 Выполнен выход из сеанса root и вход под новой учётной записью:
@@ -56,7 +56,7 @@ USE sakila;
 SHOW TABLES;
 Получено 23 строки (таблицы и представления Sakila).
 
-https://screenshot-3.png/
+![Скриншот 1.8](screenshot-3.png)
 
 Задание 2. Таблица «таблица — первичный ключ»
 Реальные таблицы (BASE TABLE)
@@ -99,7 +99,7 @@ FROM information_schema.KEY_COLUMN_USAGE
 WHERE TABLE_SCHEMA = 'sakila'
   AND CONSTRAINT_NAME = 'PRIMARY'
 ORDER BY TABLE_NAME, ORDINAL_POSITION;
-https://screenshot-4.png/
+![Скриншот задания 2](screenshot-4.png)
 
 Выводы
 В ходе работы освоены: запуск MySQL 8.0 в Docker, создание пользователя и выдача прав, переключение типа аутентификации, восстановление дампа через SOURCE внутри контейнера, анализ структуры базы через information_schema и разделение таблиц и представлений при определении первичных ключей.
