@@ -16,8 +16,8 @@ CREATE USER 'sys_temp'@'localhost' IDENTIFIED BY 'password';
 1.3. Список пользователей в базе данных
 sql
 SELECT User, Host FROM mysql.user;
-<img width="1920" height="1080" alt="screenshot-1" src="https://github.com/user-attachments/assets/04c8ffea-c3cc-4fd1-a1c9-4aa427e156ff" />
 
+![Скриншот 1.3](screenshot-1.png)
 
 1.4. Выдача всех прав пользователю sys_temp
 sql
@@ -26,7 +26,8 @@ FLUSH PRIVILEGES;
 1.5. Список прав пользователя sys_temp
 sql
 SHOW GRANTS FOR 'sys_temp'@'localhost';
-![Uploading screenshot-2.png…]()
+
+![Скриншот 1.5](screenshot-2.png)
 
 1.6. Переподключение от имени sys_temp
 Выполнен выход из сеанса root и вход под новой учётной записью:
@@ -57,8 +58,8 @@ USE sakila;
 SHOW TABLES;
 Получено 23 строки (таблицы и представления Sakila).
 
-<img width="1920" height="1080" alt="screenshot-3" src="https://github.com/user-attachments/assets/7484c5fd-5bce-4f0e-9911-bd8675591474" />
 
+![Скриншот 1.8](screenshot-3.png)
 
 Задание 2. Таблица «таблица — первичный ключ»
 Реальные таблицы (BASE TABLE)
@@ -101,7 +102,8 @@ FROM information_schema.KEY_COLUMN_USAGE
 WHERE TABLE_SCHEMA = 'sakila'
   AND CONSTRAINT_NAME = 'PRIMARY'
 ORDER BY TABLE_NAME, ORDINAL_POSITION;
-<img width="1920" height="1080" alt="screenshot-4" src="https://github.com/user-attachments/assets/c59959c1-59ba-417f-8b5e-8df514e4dfcf" />
+
+![Скриншот задания 2](screenshot-4.png)
 
 
 Выводы
